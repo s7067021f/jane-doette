@@ -1,3 +1,10 @@
+/*
+* {
+    border: 1px solid red !important;
+}
+*/
+
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -5,23 +12,131 @@
     box-sizing: border-box;
 }
 
-
 body {
-    background-color: #933939;
+font-family: 'Lato', sans-serif;
+color: #666856;
+font-weight: 300;
+margin: 0;
+padding: 0;
 }
 
-
-@media only screen and (max-width: 500px) {
-    p {
-        background-color: blue;
-    }
+.container {
+    margin: 0 auto; /*means top and bottom margins are 0, left and right are set to same size */
+    max-width: 1115px;
 }
-
-
 .row {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
+.col-4 {
+    width: 33.33%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-12 {
+    width: 100%;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.middle {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.line {
+    height: 5px;
+    width: 100%;
+    background-color: #bcbbbb;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.alignCenter {
+    align-items: center;
+    /* align-content: center; will stretch the content from top to bottom of the container (Div) */
+    /* justify-content: center; this centers in the Div */
+    display:flex;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+img {
+    max-width: 100%; /* this make images responsive */
+    height: auto;
+}
+
+h1,
+h3 {
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.textAttention {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+
+.col-4,
+.col-6,
+.col-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* NOT YET USED
+
+.justifyCenter {
+    justify-content:center;
+}
+
+.alignRight {
+    align-items: right;
+}
+*/
+
+
+@media screen and (max-width: 991px) {
+.container {
+    max-width:750px;
+}
+
+.col-4,
+.col-6 {
+    width: 100%;
+}
+
+.textRight {
+    text-align: center;
+
+}
+
+}
+
+/* all the col classes are below
 .col-1 {
     width: 8.33%;
 }
@@ -58,51 +173,4 @@ body {
 .col-12 {
     width: 100%;
 }
-
-
-/*
-.grid {
-    margin: 0 auto;
-    max-width: 1200px;
-    width: 100%;
-}
-
-
-.row {
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-}
 */
-
-#firstR {
-    background-color: #933939;
-    align-items:center; /*this only centres the elements in the div */
-    justify-content:center; /*whereas this centres the contents in the div */
-}
-
-
-#white {
-    background-color: white;
-}
-
-
-h2 {
-    padding: 0px 10px 0px 10px;
-    color: #d2232a;
-}
-
-
-p {
-    padding: 0px 10px 0px 10px;
-}
-
-
-p.thick {
-    font-weight: bold;
-}
-
-
-p.light {
-    font-weight: 200;
-}
